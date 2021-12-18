@@ -1,0 +1,99 @@
+.App-steps{
+    color: white !important;
+    padding-left: 2.5vw;
+    padding-top: 3vh;
+}
+
+.Dot-container{
+    width: 3px;
+    height: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow: visible;
+}
+
+.Dot-number-positioner{
+    width: 0px;
+    height: 100%;
+    position: relative;
+    overflow: visible;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Dot-number {
+    position: absolute;
+    right: 1rem;
+    color: white;
+}
+
+.selected .ant-steps-icon-dot {
+    background-color: rgb(80, 136, 255) !important;
+}
+
+.ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot,
+.ant-steps-item-wait .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot{
+    background-color: white;
+}
+
+.ant-steps-item-tail::after{
+/* bar color */
+    background-color: rgb(50, 50, 50) !important;
+}
+.ant-steps-item-tail{
+    padding-top: 0px !important;
+}
+
+.ant-steps-icon-dot{
+/* dot size */
+min-width: 2.5px !important;
+min-height: 2.5px !important;
+}
+.ant-steps-item-icon{
+    padding-top: 0.5px;
+    padding-left: 2.5px !important;
+    width: 5px !important;
+    height: 5px !important;
+    margin-top: 3px !important;
+}
+.ant-steps-item-active .ant-steps-item-icon{
+    padding-top: 2.5px !important;
+    padding-left: 3px !important;
+    background-color: red;
+}
+
+.App-step-title{
+    height: 1em;
+    line-height: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color: white !important;
+    position: relative;
+    bottom: 0.2em;
+    overflow: visible;
+    cursor: pointer;
+}
+
+.App-steps .ant-steps-item-content {
+    min-height: 20vh !important;
+    overflow: visible !important;
+}
+
+.initial-step{
+    pointer-events: none;
+}
+
+.initial-step .ant-steps-item-content,
+.last-step .ant-steps-item-content{
+    min-height: 8vh !important;
+}
+
+.initial-step .ant-steps-item-icon,
+.initial-step .ant-steps-item-title
+{
+    display: none;
+}
