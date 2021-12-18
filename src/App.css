@@ -160,6 +160,7 @@ footer{
 }
 
 .Home-hr {
+  margin-top: calc(50px + 25vh - 15vw); /* fit for more sizes of screen */
   width: 76vw;
   height: 3px;
   background: #252525;
@@ -180,5 +181,6 @@ footer{
   width: 40.3vw;
   position: relative;
   left: -4.42vw;
+  top: calc(50px + 25vh - 15vw); /* fit for more sizes of screen */
   z-index: 1;
 }
