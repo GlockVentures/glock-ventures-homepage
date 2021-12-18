@@ -33,16 +33,33 @@ function App() {
 
   const [ current, setCurrent ] = React.useState(1)
 
-  // const [ scrolling, setScroll]
+  const [ scrolling, setScrolling ] = React.useState(false)
 
   // const [ offset, setOffset ] = React.useState(0)
 
   React.useEffect(()=>{
     window.addEventListener('scroll', (event) => {
       let scrollTop = document.scrollingElement.scrollTop;
-      setCurrent(parseInt(scrollTop/window.innerHeight + 0.4) + 1)
+      if(scrolling===false){
+        setCurrent(parseInt(scrollTop/window.innerHeight + 0.4) + 1)
+      }
     });
   },[])
+
+  React.useEffect(()=>{
+    if(scrolling){
+      let index = scrolling
+      setTimeout(()=>setCurrent(index), 1000)
+      if(steps[index]){
+        let el = document.getElementById(steps[index])
+        if(el){
+          el.scrollIntoView({behavior:'smooth'})
+        }
+      }
+    }
+  },[scrolling])
+  
+  React.useEffect(()=>{setScrolling(false)},[current])
 
   const customDot = (dot, { status, index }) => (
     <Popover
@@ -73,13 +90,7 @@ function App() {
           direction="vertical"
           progressDot={customDot}
           onChange={(index)=>{
-            setCurrent(index)
-            if(steps[index]){
-              let el = document.getElementById(steps[index])
-              if(el){
-                el.scrollIntoView({behavior:'smooth'})
-              }
-            }
+            setScrolling(index)
           }}
         >
           {steps.map((item, index) => (
