@@ -2,20 +2,26 @@ import logo from './static/gv_logo.png';
 import './App.css';
 import { Steps, Popover } from 'antd';
 import React from 'react';
+
 import logo1 from './static/logos/Conflux_icon@2x.png'
 import logo2 from './static/logos/Certik_icon@2x.png'
 import logo3 from './static/logos/Bitkeep_icon@2x.png'
-import logo4 from './static/logos/HurricaneSwap_icon@2x.png'
-import logo5 from './static/logos/Crypto_icon@2x.png'
-import logo6 from './static/logos/RMRK_icon@2x.png'
-import logo7 from './static/logos/Evanesco_icon@2x.png'
-import logo8 from './static/logos/CERE_icon@2x.png'
-import logo9 from './static/logos/OPGames_icon@2x.png'
-import logo10 from './static/logos/Nulink_icon@2x.png'
-import logo11 from './static/logos/Crypto_icon@2x.png'
-import logo12 from './static/logos/Nulink_icon@2x.png'
-import bg from './static/Portfolios_bg@2x.png'
-import intro_bg from './static/bg_img@2x.png'
+import logo4 from './static/logos/RMRK_icon@2x.png'
+import logo5 from './static/logos/OPGames_icon@2x.png'
+import logo6 from './static/logos/sidus_icon.jpg'
+import logo7 from './static/logos/rainmaker_icon.jpg'
+import logo8 from './static/logos/99startup_icon.jpg'
+import logo9 from './static/logos/invarch_icon.jpg'
+import logo10 from './static/logos/filswan_icon.jpg'
+import logo11 from './static/logos/HurricaneSwap_icon@2x.png'
+// import logo12 from './static/logos/Crypto_icon@2x.png'
+import logo12 from './static/logos/fightclub_icon.jpg'
+import logo13 from './static/logos/CERE_icon@2x.png'
+import logo14 from './static/logos/Nulink_icon@2x.png'
+import logo15 from './static/logos/HarmonyLauncher_icon.jpg'
+
+// import bg from './static/Portfolios_bg@2x.png'
+// import intro_bg from './static/bg_img@2x.png'
 import yuhangyuan from './static/yuhangyuan_img@2x.png'
 const { Step } = Steps;
 
@@ -115,8 +121,10 @@ function App() {
 
         <div className='Home-horizontal'>
           <div className='Home-h'>
-            In Reality We Trust,
+            <p>
+            In Math <br></br> We Trust,
             In Reality We Change
+              </p>
           </div>
           <img className='Home-img' src={yuhangyuan}></img>
         </div>
@@ -128,16 +136,9 @@ function App() {
 
       <div className='Section Intro' id='Brief Inrtoduction'>
         <h2 className='Intro-h'>Our History</h2>
-
-        <img className='Intro-img ' src={intro_bg}></img>
+        {/*<img className='Intro-img ' src={intro_bg}></img>*/}
         <div className='Intro-p'>
-          We has been holding a strong belief of blockchain being the future for our
-           next generations, which has already arrived. We unremittingly seek for 
-           targets that can potentially shape the future by the power of blockchain, 
-           and back our partners with full support. Beside funding, we offer strategic 
-           resources to our portfolio partners in the pipeline of Glock Ventures from 
-           the perspectives of partnership resources, marketing & community and other 
-           post-investment services.
+          We are persistently holding a strong belief that blockchain technology is the future of our next generation and some of those products have already come to reality. We are unremittingly seeking investment targets in this field that can potentially reshape the future with the power of blockchain and have an opportunity to be endowed with full support from us. Thus, regardless of monetary funding, we also offer strategic resources to our portfolio partners from Glock Venture's ecosystem, including rich partnership resources, professional marketing skills,  strategic community programs, and other post-investment services.
         </div>
 
       </div>
@@ -158,39 +159,51 @@ function App() {
           </div>
           <div>
             <img src={logo4}></img>
-            Hurricaneswap
-          </div>
-          <div>
-            <img src={logo5}></img>
-            Crypto Fight Club
-          </div>
-          <div>
-            <img src={logo6}></img>
             RMRK
           </div>
           <div>
+            <img src={logo5}></img>
+            OPGames
+          </div>
+          <div>
+            <img src={logo6}></img>
+            Sidus
+          </div>
+          <div>
             <img src={logo7}></img>
-            Evanesco
+            Rainmaker
           </div>
           <div>
             <img src={logo8}></img>
-            Cere
+            99Startup
           </div>
           <div>
             <img src={logo9}></img>
-            OP Games
+            Invarch
           </div>
           <div>
             <img src={logo10}></img>
-            Nulink
+            FilSwan
           </div>
           <div>
             <img src={logo11}></img>
-            Crypto Fight Club
+            Hurricaneswap
           </div>
           <div>
             <img src={logo12}></img>
+            Crypto FIGHT Club
+          </div>
+          <div>
+            <img src={logo13}></img>
+            CERE
+          </div>
+          <div>
+            <img src={logo14}></img>
             Nulink
+          </div>
+          <div>
+            <img src={logo15}></img>
+            Harmon Launcher
           </div>
         </div>
       </div>
@@ -199,8 +212,10 @@ function App() {
         <div className='Section_last__content Contact' id='Contact'>
           <div className='Contact-center'>
             <div className='Contact-title'>Contact</div>
-            <div className='Contact-info1'>Twitter：@GlockVentures</div>
-            <div className='Contact-info1'>Email：invest@glockventures.com</div>
+            <div className='Contact-info1'>Twitter：
+              <a href={"https://twitter.com/GlockVentures"} target={"_blank"}>@GlockVentures</a></div>
+            <div className='Contact-info1'>Email：
+              <a href={"mailto:invest@glockventures.com"} target={"_blank"}>invest@glockventures.com</a></div>
           </div>
         </div>
         <footer>
