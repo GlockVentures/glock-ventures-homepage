@@ -59,7 +59,7 @@
   flex-direction: column;
   justify-content: stretch;
   align-items: stretch;
-  background:url('./static/logos/Contact_bg@2x.png') ;
+  /*background:url('./static/logos/Contact_bg@2x.png') ;*/
   background-size: cover;
 }
 
@@ -92,15 +92,15 @@ footer{
 
 .Portfolios img {
   margin-bottom: 0.8em;
-  width: calc(20px + 10vmin);
-  height: calc(20px + 10vmin);
+  width: calc(10vmin);
+  height: calc(10vmin);
   /*border: 1px dashed white;*/
   border-radius: 200px;
 }
 
 .Portfolios {
-  background-image: url('./static/Portfolios_bg@2x.png');
-  background-size: cover;
+  /*background-image: url('./static/Portfolios_bg@2x.png');*/
+  /*background-size: cover;*/
 }
 
 .Portfolios-center {

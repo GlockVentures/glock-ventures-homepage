@@ -3,12 +3,12 @@ import './App.css';
 import { Steps, Popover } from 'antd';
 import React from 'react';
 
-import logo1 from './static/logos/Conflux_icon@2x.png'
-import logo2 from './static/logos/Certik_icon@2x.png'
-import logo3 from './static/logos/Bitkeep_icon@2x.png'
-import logo4 from './static/logos/RMRK_icon@2x.png'
-import logo5 from './static/logos/OPGames_icon@2x.png'
-import logo6 from './static/logos/sidus_icon.jpg'
+import logo1 from './static/logos/Bitkeep_icon@2x.png'
+import logo2 from './static/logos/RMRK_icon@2x.png'
+import logo3 from './static/logos/OPGames_icon@2x.png'
+import logo4 from './static/logos/sidus_icon.jpg'
+import logo5 from './static/logos/Conflux_icon@2x.png'
+import logo6 from './static/logos/Certik_icon@2x.png'
 import logo7 from './static/logos/rainmaker_icon.jpg'
 import logo8 from './static/logos/99startup_icon.jpg'
 import logo9 from './static/logos/Joysteam_icon@2x.png'
@@ -149,16 +149,6 @@ function App() {
       <div className='Section Portfolios' id='Portfolios'>
         <div className='Portfolios-center'>
           <div>
-            <a href={'https://twitter.com/Conflux_Network'} target={'_blank'}>
-            <img src={logo1}></img></a>
-            Conflux
-          </div>
-          <div>
-            <a href={'https://twitter.com/certik_io'} target={'_blank'}>
-            <img src={logo2}></img></a>
-            CertiK
-          </div>
-          <div>
             <a href={'https://twitter.com/BitKeepOS'} target={'_blank'}>
             <img src={logo3}></img></a>
             Bitkeep
@@ -177,6 +167,16 @@ function App() {
             <a href={'https://twitter.com/galaxy_sidus'} target={'_blank'}>
             <img src={logo6}></img></a>
             Sidus
+          </div>
+          <div>
+            <a href={'https://twitter.com/Conflux_Network'} target={'_blank'}>
+            <img src={logo1}></img></a>
+            Conflux
+          </div>
+          <div>
+            <a href={'https://twitter.com/certik_io'} target={'_blank'}>
+            <img src={logo2}></img></a>
+            CertiK
           </div>
           <div>
             <a href={'https://twitter.com/RainmakerGaming'} target={'_blank'}>
