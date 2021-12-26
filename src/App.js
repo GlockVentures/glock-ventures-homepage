@@ -35,16 +35,20 @@ function App() {
 
   const [ scrolling, setScrolling ] = React.useState(false)
 
+  const scroll = React.useRef()
+
   // const [ offset, setOffset ] = React.useState(0)
 
   React.useEffect(()=>{
-    window.addEventListener('scroll', (event) => {
-      let scrollTop = document.scrollingElement.scrollTop;
-      if(scrolling===false){
-        setCurrent(parseInt(scrollTop/window.innerHeight + 0.4) + 1)
-      }
-    });
-  },[])
+    if(scroll.current){
+      scroll.current.addEventListener('scroll', (event) => {
+        let scrollTop = scroll.current.scrollTop;
+        if(scrolling===false){
+          setCurrent(parseInt(scrollTop/window.innerHeight + 0.4) + 1)
+        }
+      });
+    }
+  },[scroll])
 
   React.useEffect(()=>{
     if(scrolling){
@@ -81,7 +85,7 @@ function App() {
   );
 
   return (
-    <div className="App">
+    <div className="App" ref={scroll}>
       <div className='App-left'>
         <img src={logo} className="App-logo" alt="logo" />
         <Steps
@@ -129,7 +133,10 @@ function App() {
       <div className='Section Intro' id='Brief Inrtoduction'>
         <h2 className='Intro-h'>Our History</h2>
 
-        <img className='Intro-img ' src={intro_bg}></img>
+        <div className='Intro-img-container '>
+          <img className='Intro-img ' src={intro_bg}></img>
+        </div>
+
         <div className='Intro-p'>
           We has been holding a strong belief of blockchain being the future for our
            next generations, which has already arrived. We unremittingly seek for 
