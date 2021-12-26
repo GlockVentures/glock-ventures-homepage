@@ -130,7 +130,7 @@ function App() {
       <div className='Section Home' id='Home'>
 
         <div className='Home-horizontal'>
-          <div className='Home-h'>
+          <div className={isMobile()?'Home-h-mobile':'Home-h'}>
             <p>
             In Math <br></br> We Trust,
             In Reality We Change
@@ -147,9 +147,9 @@ function App() {
       <div className='Section Intro' id='Brief_Introduction'>
         <h2 className='Intro-h'>Our History</h2>
 
-        <div hidden={isMobile()} className='Intro-img-container '>
-          <img className='Intro-img ' src={intro_bg}></img>
-        </div>
+        {/*<div hidden={isMobile()} className='Intro-img-container '>*/}
+          {/*<img className='Intro-img ' src={intro_bg}></img>*/}
+        {/*</div>*/}
 
         <div className='Intro-p'>
           We are persistently holding a strong belief that blockchain technology is the future of our next generation and some of those products have already come to reality.
@@ -163,32 +163,32 @@ function App() {
         <div className='Portfolios-center'>
           <div>
             <a href={'https://twitter.com/BitKeepOS'} target={'_blank'}>
-            <img src={logo3}></img></a>
+            <img src={logo1}></img></a>
             Bitkeep
           </div>
           <div>
             <a href={'https://twitter.com/RmrkApp'} target={'_blank'}>
-            <img src={logo4}></img></a>
+            <img src={logo2}></img></a>
             RMRK
           </div>
           <div>
             <a href={'https://twitter.com/OPGames_'} target={'_blank'}>
-            <img src={logo5}></img></a>
+            <img src={logo3}></img></a>
             OPGames
           </div>
           <div>
             <a href={'https://twitter.com/galaxy_sidus'} target={'_blank'}>
-            <img src={logo6}></img></a>
+            <img src={logo4}></img></a>
             Sidus
           </div>
           <div>
             <a href={'https://twitter.com/Conflux_Network'} target={'_blank'}>
-            <img src={logo1}></img></a>
+            <img src={logo5}></img></a>
             Conflux
           </div>
           <div>
             <a href={'https://twitter.com/certik_io'} target={'_blank'}>
-            <img src={logo2}></img></a>
+            <img src={logo6}></img></a>
             CertiK
           </div>
           <div>
@@ -219,12 +219,12 @@ function App() {
           <div>
             <a href={'https://twitter.com/HurricaneSwap'} target={'_blank'}>
             <img src={logo12}></img></a>
-            Hurricaneswap
+            {isMobile()?'HSwap':'Hurricaneswap'}
           </div>
           <div>
             <a href={'https://twitter.com/CFCFIGHTING'} target={'_blank'}>
             <img src={logo13}></img></a>
-            Crypto FIGHT Club
+            CFC
           </div>
           <div>
             <a href={'https://twitter.com/cerenetwork'} target={'_blank'}>
