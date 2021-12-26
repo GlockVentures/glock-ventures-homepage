@@ -2,20 +2,27 @@ import logo from './static/gv_logo.png';
 import './App.css';
 import { Steps, Popover } from 'antd';
 import React from 'react';
-import logo1 from './static/logos/Conflux_icon@2x.png'
-import logo2 from './static/logos/Certik_icon@2x.png'
-import logo3 from './static/logos/Bitkeep_icon@2x.png'
-import logo4 from './static/logos/HurricaneSwap_icon@2x.png'
-import logo5 from './static/logos/Crypto_icon@2x.png'
-import logo6 from './static/logos/RMRK_icon@2x.png'
-import logo7 from './static/logos/Evanesco_icon@2x.png'
-import logo8 from './static/logos/CERE_icon@2x.png'
-import logo9 from './static/logos/OPGames_icon@2x.png'
-import logo10 from './static/logos/Nulink_icon@2x.png'
-import logo11 from './static/logos/Crypto_icon@2x.png'
-import logo12 from './static/logos/Nulink_icon@2x.png'
-import bg from './static/Portfolios_bg@2x.png'
-import intro_bg from './static/bg_img@2x.png'
+
+import logo1 from './static/logos/Bitkeep_icon@2x.png'
+import logo2 from './static/logos/RMRK_icon@2x.png'
+import logo3 from './static/logos/OPGames_icon@2x.png'
+import logo4 from './static/logos/sidus_icon.jpg'
+import logo5 from './static/logos/Conflux_icon@2x.png'
+import logo6 from './static/logos/Certik_icon@2x.png'
+import logo7 from './static/logos/rainmaker_icon.jpg'
+import logo8 from './static/logos/99startup_icon.jpg'
+import logo9 from './static/logos/Joysteam_icon@2x.png'
+import logo10 from './static/logos/invarch_icon.jpg'
+import logo11 from './static/logos/filswan_icon.jpg'
+import logo12 from './static/logos/HurricaneSwap_icon@2x.png'
+import logo13 from './static/logos/fightclub_icon.jpg'
+import logo14 from './static/logos/CERE_icon@2x.png'
+import logo15 from './static/logos/breach_icon.jpg'
+import logo16 from './static/logos/Nulink_icon@2x.png'
+import logo17 from './static/logos/HarmonyLauncher_icon.jpg'
+
+// import bg from './static/Portfolios_bg@2x.png'
+// import intro_bg from './static/bg_img@2x.png'
 import yuhangyuan from './static/yuhangyuan_img@2x.png'
 const { Step } = Steps;
 
@@ -119,8 +126,10 @@ function App() {
 
         <div className='Home-horizontal'>
           <div className='Home-h'>
-            In Reality We Trust,
+            <p>
+            In Math <br></br> We Trust,
             In Reality We Change
+              </p>
           </div>
           <img className='Home-img' src={yuhangyuan}></img>
         </div>
@@ -138,13 +147,9 @@ function App() {
         </div>
 
         <div className='Intro-p'>
-          We has been holding a strong belief of blockchain being the future for our
-           next generations, which has already arrived. We unremittingly seek for 
-           targets that can potentially shape the future by the power of blockchain, 
-           and back our partners with full support. Beside funding, we offer strategic 
-           resources to our portfolio partners in the pipeline of Glock Ventures from 
-           the perspectives of partnership resources, marketing & community and other 
-           post-investment services.
+          We are persistently holding a strong belief that blockchain technology is the future of our next generation and some of those products have already come to reality.
+          We are unremittingly seeking investment targets in this field that can potentially reshape the future with the power of blockchain and have an opportunity to be endowed with full support from us.
+          Thus, regardless of monetary funding, we also offer strategic resources to our portfolio partners from the ecosystem of Glock Ventures, including rich partnership resources, professional marketing skills,  strategic community programs, and other post-investment services.
         </div>
 
       </div>
@@ -152,52 +157,89 @@ function App() {
       <div className='Section Portfolios' id='Portfolios'>
         <div className='Portfolios-center'>
           <div>
-            <img src={logo1}></img>
-            Conflux
-          </div>
-          <div>
-            <img src={logo2}></img>
-            Cirtik
-          </div>
-          <div>
-            <img src={logo3}></img>
+            <a href={'https://twitter.com/BitKeepOS'} target={'_blank'}>
+            <img src={logo3}></img></a>
             Bitkeep
           </div>
           <div>
-            <img src={logo4}></img>
-            Hurricaneswap
-          </div>
-          <div>
-            <img src={logo5}></img>
-            Crypto Fight Club
-          </div>
-          <div>
-            <img src={logo6}></img>
+            <a href={'https://twitter.com/RmrkApp'} target={'_blank'}>
+            <img src={logo4}></img></a>
             RMRK
           </div>
           <div>
-            <img src={logo7}></img>
-            Evanesco
+            <a href={'https://twitter.com/OPGames_'} target={'_blank'}>
+            <img src={logo5}></img></a>
+            OPGames
           </div>
           <div>
-            <img src={logo8}></img>
-            Cere
+            <a href={'https://twitter.com/galaxy_sidus'} target={'_blank'}>
+            <img src={logo6}></img></a>
+            Sidus
           </div>
           <div>
-            <img src={logo9}></img>
-            OP Games
+            <a href={'https://twitter.com/Conflux_Network'} target={'_blank'}>
+            <img src={logo1}></img></a>
+            Conflux
           </div>
           <div>
-            <img src={logo10}></img>
+            <a href={'https://twitter.com/certik_io'} target={'_blank'}>
+            <img src={logo2}></img></a>
+            CertiK
+          </div>
+          <div>
+            <a href={'https://twitter.com/RainmakerGaming'} target={'_blank'}>
+            <img src={logo7}></img></a>
+            Rainmaker
+          </div>
+          <div>
+            <a href={'https://twitter.com/99Starz_'} target={'_blank'}>
+            <img src={logo8}></img></a>
+            99Starz
+          </div>
+          <div>
+            <a href={'https://twitter.com/JoystreamDAO'} target={'_blank'}>
+            <img src={logo9}></img></a>
+            Joystream
+          </div>
+          <div>
+            <a href={'https://twitter.com/InvArchNetwork'} target={'_blank'}>
+            <img src={logo10}></img></a>
+            InvArch
+          </div>
+          <div>
+            <a href={'https://twitter.com/filswan1'} target={'_blank'}>
+            <img src={logo11}></img></a>
+            FilSwan
+          </div>
+          <div>
+            <a href={'https://twitter.com/HurricaneSwap'} target={'_blank'}>
+            <img src={logo12}></img></a>
+            Hurricaneswap
+          </div>
+          <div>
+            <a href={'https://twitter.com/CFCFIGHTING'} target={'_blank'}>
+            <img src={logo13}></img></a>
+            Crypto FIGHT Club
+          </div>
+          <div>
+            <a href={'https://twitter.com/cerenetwork'} target={'_blank'}>
+            <img src={logo14}></img></a>
+            CERE
+          </div>
+          <div>
+            <a href={'https://twitter.com/Breach_GG'} target={'_blank'}>
+            <img src={logo15}></img></a>
+            Breach
+          </div>
+          <div>
+            <a href={'https://twitter.com/NuLink_'} target={'_blank'}>
+            <img src={logo16}></img></a>
             Nulink
           </div>
           <div>
-            <img src={logo11}></img>
-            Crypto Fight Club
-          </div>
-          <div>
-            <img src={logo12}></img>
-            Nulink
+            <a href={'https://twitter.com/HarmonyLauncher'} target={'_blank'}>
+            <img src={logo17}></img></a>
+            Harmony Launcher
           </div>
         </div>
       </div>
@@ -206,8 +248,10 @@ function App() {
         <div className='Section_last__content Contact' id='Contact'>
           <div className='Contact-center'>
             <div className='Contact-title'>Contact</div>
-            <div className='Contact-info1'>Twitter：@GlockVentures</div>
-            <div className='Contact-info1'>Email：invest@glockventures.com</div>
+            <div className='Contact-info1'>Twitter：
+              <a href={"https://twitter.com/GlockVentures"} target={"_blank"}>@GlockVentures</a></div>
+            <div className='Contact-info1'>Email：
+              <a href={"mailto:invest@glockventures.com"} target={"_blank"}>invest@glockventures.com</a></div>
           </div>
         </div>
         <footer>

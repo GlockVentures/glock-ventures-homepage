@@ -67,6 +67,8 @@ html, body, #root {
   flex-direction: column;
   justify-content: stretch;
   align-items: stretch;
+  /*background:url('./static/logos/Contact_bg@2x.png') ;*/
+  background-size: cover;
 }
 
 .Section_last__content{
@@ -98,12 +100,15 @@ footer{
 
 .Portfolios img {
   margin-bottom: 0.8em;
-  width: calc(20px + 15vmin);
-  border: 1px dashed white;
+  width: calc(10vmin);
+  height: calc(10vmin);
+  /*border: 1px dashed white;*/
+  border-radius: 200px;
 }
 
 .Portfolios {
-  background-image: url('./static/Portfolios_bg@2x.png');
+  /*background-image: url('./static/Portfolios_bg@2x.png');*/
+  /*background-size: cover;*/
 }
 
 .Portfolios-center {
@@ -128,8 +133,8 @@ footer{
 }
 
 .Intro-p {
-  width: calc(500px + 30vw);
-
+  /*width: calc(500px + 25vw);*/
+  margin-right:10vw;
   font-size: calc(8px + 1.5vmin);
   font-family: 'PingFangSC-Regular', 'PingFang SC';
   font-weight: 400;
