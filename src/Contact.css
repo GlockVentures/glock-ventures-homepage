@@ -10,6 +10,7 @@
     box-shadow: 0px 0px 29px 0px #000000;
     border-radius: 2px;
     width: calc(530px + 10vw);
+    max-width: calc(100vw - 40px);
     height: calc(180px + 10vh);
     margin-right: 10vw;
 

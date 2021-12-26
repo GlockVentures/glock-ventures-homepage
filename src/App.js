@@ -21,15 +21,16 @@ import logo15 from './static/logos/breach_icon.jpg'
 import logo16 from './static/logos/Nulink_icon@2x.png'
 import logo17 from './static/logos/HarmonyLauncher_icon.jpg'
 
-// import bg from './static/Portfolios_bg@2x.png'
-// import intro_bg from './static/bg_img@2x.png'
+import bg from './static/Portfolios_bg@2x.png'
+import intro_bg from './static/bg_img.png'
 import yuhangyuan from './static/yuhangyuan_img@2x.png'
+import { isMobile } from './platform';
 const { Step } = Steps;
 
 const steps = [
   '',
   'Home',
-  'Brief Inrtoduction',
+  'Brief Introduction',
   'Portfolios',
   'Contact',
   '',
@@ -62,7 +63,8 @@ function App() {
       let index = scrolling
       setTimeout(()=>setCurrent(index), 1000)
       if(steps[index]){
-        let el = document.getElementById(steps[index])
+        let el = document.getElementById(steps[index].replace(' ','_'))
+        console.log(steps[index].replace(' ','_'))
         if(el){
           el.scrollIntoView({behavior:'smooth'})
         }
@@ -92,7 +94,7 @@ function App() {
   );
 
   return (
-    <div className="App" ref={scroll}>
+    <div className={`App ${isMobile()?'mobile':''}`} ref={scroll}>
       <div className='App-left'>
         <img src={logo} className="App-logo" alt="logo" />
         <Steps
@@ -109,14 +111,17 @@ function App() {
               key={item}
               title={
                 <div className='App-step-title'>
-                  {index==current?item:'0'+(index)}
+                  {index==current?isMobile()?item.slice(0,11):item:'0'+(index)}
                 </div>
               }
               className={(index===0||index===steps.length-1)?
                 'initial-step':
                 (index===steps.length-2)?
                   'last-step'
-                  :''}
+                  :(index===1)?
+                    'first-step'
+                    :''
+              }
             />
           ))}
         </Steps>
@@ -139,10 +144,10 @@ function App() {
 
       </div>
 
-      <div className='Section Intro' id='Brief Inrtoduction'>
+      <div className='Section Intro' id='Brief_Introduction'>
         <h2 className='Intro-h'>Our History</h2>
 
-        <div className='Intro-img-container '>
+        <div hidden={isMobile()} className='Intro-img-container '>
           <img className='Intro-img ' src={intro_bg}></img>
         </div>
 
@@ -255,7 +260,7 @@ function App() {
           </div>
         </div>
         <footer>
-          © Copyright 2021 | Glock Ventures | All Rights Reserved
+          © Copyright 2021 {isMobile()?<br/>:'|'} Glock Ventures | All Rights Reserved
         </footer>
       </div>
     </div>
