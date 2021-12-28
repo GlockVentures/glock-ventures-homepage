@@ -93,12 +93,11 @@ footer{
 
 .Portfolios-center > div {
   margin: 3vw;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
-  font-size: calc(5px + 0.8vw);
+  font-size: calc(5px + 0.2vw);
 }
 
 .Portfolios img {
@@ -182,6 +181,20 @@ footer{
   z-index: 2;
 }
 
+.Home-h-mobile {
+  width: 32.125vw;
+  min-width: 32.125vw;
+  height: 28.729vw;
+  font-size: 5.116vw;
+  font-family: Arial-Black, Arial;
+  font-weight: 900;
+  color: #FFFFFF !important;
+  text-align: left;
+  margin-top: 7.204vw;
+
+  position: relative;
+  z-index: 2;
+}
 .Home-hr {
   margin-top: calc(50px + 25vh - 15vw); /* fit for more sizes of screen */
   width: 76vw;
