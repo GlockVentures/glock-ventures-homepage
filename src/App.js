@@ -3,28 +3,131 @@ import './App.css';
 import { Steps, Popover } from 'antd';
 import React from 'react';
 
-import logo1 from './static/logos/Bitkeep_icon@2x.png'
-import logo2 from './static/logos/RMRK_icon@2x.png'
-import logo3 from './static/logos/OPGames_icon@2x.png'
-import logo4 from './static/logos/sidus_icon.jpg'
-import logo5 from './static/logos/Conflux_icon@2x.png'
-import logo6 from './static/logos/Certik_icon@2x.png'
-import logo7 from './static/logos/rainmaker_icon.jpg'
-import logo8 from './static/logos/99startup_icon.jpg'
-import logo9 from './static/logos/Joysteam_icon@2x.png'
-import logo10 from './static/logos/invarch_icon.jpg'
-import logo11 from './static/logos/filswan_icon.jpg'
-import logo12 from './static/logos/HurricaneSwap_icon@2x.png'
-import logo13 from './static/logos/fightclub_icon.jpg'
-import logo14 from './static/logos/CERE_icon@2x.png'
-import logo15 from './static/logos/breach_icon.jpg'
-import logo16 from './static/logos/Nulink_icon@2x.png'
-import logo17 from './static/logos/HarmonyLauncher_icon.jpg'
+import logo_defiyield from './static/logos/defiyield0.jpg'
+import logo_taunt from './static/logos/Taunt_Battleworld.jpg'
+import logo_bitkeep from './static/logos/Bitkeep_icon@2x.png'
+import logo_rmrk from './static/logos/RMRK_icon@2x.png'
+import logo_opgames from './static/logos/OPGames_icon@2x.png'
+import logo_sidus from './static/logos/sidus_icon.jpg'
+import logo_conflux from './static/logos/Conflux_icon@2x.png'
+import logo_certik from './static/logos/Certik_icon@2x.png'
+import logo_rainmaker from './static/logos/rainmaker_icon.jpg'
+import logo_99startup from './static/logos/99startup_icon.jpg'
+import logo_joysteam from './static/logos/Joysteam_icon@2x.png'
+import logo_invarch from './static/logos/invarch_icon.jpg'
+import logo_filswan from './static/logos/filswan_icon.jpg'
+import logo_hurricane from './static/logos/HurricaneSwap_icon@2x.png'
+import logo_fightclub from './static/logos/fightclub_icon.jpg'
+import logo_cere from './static/logos/CERE_icon@2x.png'
+import logo_breach from './static/logos/breach_icon.jpg'
+import logo_nulink from './static/logos/Nulink_icon@2x.png'
+import logo_harmonylauncher from './static/logos/HarmonyLauncher_icon.jpg'
 
 import bg from './static/Portfolios_bg@2x.png'
 import intro_bg from './static/bg_img.png'
 import yuhangyuan from './static/yuhangyuan_img@2x.png'
 import { isMobile } from './platform';
+
+const logo_names = [
+   {
+    name:"DefiYield",
+    twitter:'https://twitter.com/defiyield_app',
+    logo:logo_defiyield
+  },
+   {
+    name:"Taunt",
+    twitter:'https://twitter.com/playtaunt',
+    logo:logo_taunt
+  },
+  {
+    name:"Bitkeep",
+    twitter:'https://twitter.com/BitKeepOS',
+    logo:logo_bitkeep
+  },
+  {
+    name:"RMRK",
+    twitter:"https://twitter.com/RmrkApp",
+    logo:logo_rmrk
+  },
+  {
+    name:"OPGames",
+    twitter:"https://twitter.com/OPGames_",
+    logo:logo_opgames
+  },
+  {
+    name:"Sidus",
+    twitter:"https://twitter.com/galaxy_sidus",
+    logo:logo_sidus
+  },
+   {
+    name:"Conflux",
+    twitter:"https://twitter.com/Conflux_Network",
+    logo:logo_conflux
+  },
+   {
+    name:"CertiK",
+    twitter:"https://twitter.com/certik_io",
+    logo:logo_certik
+  },
+   {
+    name:"Rainmaker",
+    twitter:"https://twitter.com/RainmakerGaming",
+    logo:logo_rainmaker
+  },
+   {
+    name:"99Starz",
+    twitter:"https://twitter.com/99Starz_",
+    logo:logo_99startup
+  },
+    {
+    name:"Joystream",
+    twitter:"https://twitter.com/JoystreamDAO",
+    logo:logo_joysteam
+  },
+    {
+    name:"InvArch",
+    twitter:"https://twitter.com/InvArchNetwork",
+    logo:logo_invarch
+  },
+    {
+    name:"FilSwan",
+    twitter:"https://twitter.com/filswan1",
+    logo:logo_filswan
+  },
+    {
+    name:isMobile()?'HSwap':'Hurricaneswap',
+    twitter:"https://twitter.com/HurricaneSwap",
+    logo:logo_hurricane
+  },
+    {
+    name:"CFC",
+    twitter:"https://twitter.com/CFCFIGHTING",
+    logo:logo_fightclub,
+  },
+    {
+    name:"CERE",
+    twitter:"https://twitter.com/cerenetwork",
+    logo:logo_cere
+  },
+  {
+    name:"Breach",
+    twitter:"https://twitter.com/Breach_GG",
+    logo:logo_breach
+  },
+  {
+    name:"Nulink",
+    twitter:"https://twitter.com/NuLink_",
+    logo:logo_nulink
+  },
+  {
+    name:"Harmony Launcher",
+    twitter:"https://twitter.com/HarmonyLauncher",
+    logo:logo_harmonylauncher
+  },
+]
+
+
+
 const { Step } = Steps;
 
 const steps = [
@@ -161,91 +264,15 @@ function App() {
 
       <div className='Section Portfolios' id='Portfolios'>
         <div className='Portfolios-center'>
-          <div>
-            <a href={'https://twitter.com/BitKeepOS'} target={'_blank'}>
-            <img src={logo1}></img></a>
-            Bitkeep
+          {logo_names.map((item, index)=>{
+          return(
+            <div>
+            <a href={item.twitter} target={'_blank'}>
+            <img src={item.logo}></img></a>
+              {item.name}
           </div>
-          <div>
-            <a href={'https://twitter.com/RmrkApp'} target={'_blank'}>
-            <img src={logo2}></img></a>
-            RMRK
-          </div>
-          <div>
-            <a href={'https://twitter.com/OPGames_'} target={'_blank'}>
-            <img src={logo3}></img></a>
-            OPGames
-          </div>
-          <div>
-            <a href={'https://twitter.com/galaxy_sidus'} target={'_blank'}>
-            <img src={logo4}></img></a>
-            Sidus
-          </div>
-          <div>
-            <a href={'https://twitter.com/Conflux_Network'} target={'_blank'}>
-            <img src={logo5}></img></a>
-            Conflux
-          </div>
-          <div>
-            <a href={'https://twitter.com/certik_io'} target={'_blank'}>
-            <img src={logo6}></img></a>
-            CertiK
-          </div>
-          <div>
-            <a href={'https://twitter.com/RainmakerGaming'} target={'_blank'}>
-            <img src={logo7}></img></a>
-            Rainmaker
-          </div>
-          <div>
-            <a href={'https://twitter.com/99Starz_'} target={'_blank'}>
-            <img src={logo8}></img></a>
-            99Starz
-          </div>
-          <div>
-            <a href={'https://twitter.com/JoystreamDAO'} target={'_blank'}>
-            <img src={logo9}></img></a>
-            Joystream
-          </div>
-          <div>
-            <a href={'https://twitter.com/InvArchNetwork'} target={'_blank'}>
-            <img src={logo10}></img></a>
-            InvArch
-          </div>
-          <div>
-            <a href={'https://twitter.com/filswan1'} target={'_blank'}>
-            <img src={logo11}></img></a>
-            FilSwan
-          </div>
-          <div>
-            <a href={'https://twitter.com/HurricaneSwap'} target={'_blank'}>
-            <img src={logo12}></img></a>
-            {isMobile()?'HSwap':'Hurricaneswap'}
-          </div>
-          <div>
-            <a href={'https://twitter.com/CFCFIGHTING'} target={'_blank'}>
-            <img src={logo13}></img></a>
-            CFC
-          </div>
-          <div>
-            <a href={'https://twitter.com/cerenetwork'} target={'_blank'}>
-            <img src={logo14}></img></a>
-            CERE
-          </div>
-          <div>
-            <a href={'https://twitter.com/Breach_GG'} target={'_blank'}>
-            <img src={logo15}></img></a>
-            Breach
-          </div>
-          <div>
-            <a href={'https://twitter.com/NuLink_'} target={'_blank'}>
-            <img src={logo16}></img></a>
-            Nulink
-          </div>
-          <div>
-            <a href={'https://twitter.com/HarmonyLauncher'} target={'_blank'}>
-            <img src={logo17}></img></a>
-            Harmony Launcher
-          </div>
+              )})
+          }
         </div>
       </div>
 
