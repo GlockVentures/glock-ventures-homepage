@@ -29,21 +29,6 @@ import yuhangyuan from './static/yuhangyuan_img@2x.png'
 import { isMobile } from './platform';
 
 const logo_names = [
-   {
-    name:"DefiYield",
-    twitter:'https://twitter.com/defiyield_app',
-    logo:logo_defiyield
-  },
-   {
-    name:"Taunt",
-    twitter:'https://twitter.com/playtaunt',
-    logo:logo_taunt
-  },
-  {
-    name:"Bitkeep",
-    twitter:'https://twitter.com/BitKeepOS',
-    logo:logo_bitkeep
-  },
   {
     name:"RMRK",
     twitter:"https://twitter.com/RmrkApp",
@@ -58,16 +43,6 @@ const logo_names = [
     name:"Sidus",
     twitter:"https://twitter.com/galaxy_sidus",
     logo:logo_sidus
-  },
-   {
-    name:"Conflux",
-    twitter:"https://twitter.com/Conflux_Network",
-    logo:logo_conflux
-  },
-   {
-    name:"CertiK",
-    twitter:"https://twitter.com/certik_io",
-    logo:logo_certik
   },
    {
     name:"Rainmaker",
@@ -93,6 +68,31 @@ const logo_names = [
     name:"FilSwan",
     twitter:"https://twitter.com/filswan1",
     logo:logo_filswan
+  },
+  {
+    name:"DefiYield",
+    twitter:'https://twitter.com/defiyield_app',
+    logo:logo_defiyield
+  },
+   {
+    name:"Taunt",
+    twitter:'https://twitter.com/playtaunt',
+    logo:logo_taunt
+  },
+  {
+    name:"Bitkeep",
+    twitter:'https://twitter.com/BitKeepOS',
+    logo:logo_bitkeep
+  },
+  {
+    name:"Conflux",
+    twitter:"https://twitter.com/Conflux_Network",
+    logo:logo_conflux
+  },
+   {
+    name:"CertiK",
+    twitter:"https://twitter.com/certik_io",
+    logo:logo_certik
   },
     {
     name:isMobile()?'HSwap':'Hurricaneswap',
