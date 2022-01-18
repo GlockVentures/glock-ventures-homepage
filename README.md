@@ -1,72 +1,45 @@
-scp -r build deai:/home/ubuntu/gv_demo
 
-# Getting Started with Create React App
+# Adding a New Portfolio 
+## 1. Put Logo Into Source Code
+1. Rename the filename of the logo to xxx_icoin.png or *.jpg, where xxx is the filename which cannot be too long. If project name is very long, please use short name to replace it. For example, CFC for CryptoFightClub.
+2. Put renamed file to path 'src/static/logos/' folder.
+3. Open 'src/App.js' for editing and add a new line such as follows 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+    import logo_nulink from './static/logos/Nulink_icon@2x.png'
 
-In the project directory, you can run:
+4. Adding a new element in 'logo_names' of 'src/App.js' which consists of project name, twitter and logo such as follows (Note: the order in logo_names will define the order in real webpage)
 
-### `yarn start`
+    
+    {
+        name:"Nulink",
+        twitter:"https://twitter.com/NuLink_",
+        logo:logo_nulink
+    },
+    
+5. Check anything is okay by running the code on local computer. Open terminal and type such commands: 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    yarn start
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+6. A website on 'localhost:3000' will be opened and check anything is okay as you are willing. 
 
-### `yarn test`
+## 2. Get Deployed Build.zip
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Run following command to get the deployed version of the website.
 
-### `yarn build`
+    
+    yarn build
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Once it is completed, compress build folder to 'build.zip' and login CPanel Backend:https://md-hk-7.webhostbox.net:2083/cpsess3585776574/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 3. Upload to Remote Server via CPanel Backend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Click 'File Manager'. Then, click the checkbox 'Overwrite existing files' and click 'upload' to upload 'build.zip' in step 8.
+2. Once step 9 is completed, right click 'build.zip' and click 'extract' to decompress file into build folder.
+3. Back to CPanel backend and click terminal. Enter following commands
 
-### `yarn eject`
+      
+      mv build/* www/
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. Refresh website http://glockventures.com/ to check everything is fine.
+   
