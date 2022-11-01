@@ -1,4 +1,4 @@
-import logo from './static/gv_logo.png';
+import logo from './static/gv_logo.jpg';
 import './App.css';
 import { Steps, Popover } from 'antd';
 import React from 'react';
@@ -19,10 +19,14 @@ import logo_filswan from './static/logos/filswan_icon.jpg'
 import logo_hurricane from './static/logos/HurricaneSwap_icon@2x.png'
 import logo_fightclub from './static/logos/fightclub_icon.jpg'
 import logo_cere from './static/logos/CERE_icon@2x.png'
-import logo_breach from './static/logos/breach_icon.jpg'
+import logo_airstack  from './static/logos/Airstack_icon.jpeg'
+import logo_soshow from './static/logos/Soshow_logo.png'
 import logo_nulink from './static/logos/Nulink_icon@2x.png'
 import logo_harmonylauncher from './static/logos/HarmonyLauncher_icon.jpg'
-
+import logo_cardinal from './static/logos/Cardinal_logo.png'
+import logo_dojima from './static/logos/DojimaNetwork_logo.jpeg'
+import logo_chia from './static/logos/logo_chia.png'
+import logo_immutable from './static/logos/logo_immutable.jpeg'
 import bg from './static/Portfolios_bg@2x.png'
 import intro_bg from './static/bg_img.png'
 import yuhangyuan from './static/yuhangyuan_img@2x.png'
@@ -35,6 +39,21 @@ const logo_names = [
     logo:logo_rmrk
   },
   {
+    name:"FilSwan",
+    twitter:"https://twitter.com/filswan1",
+    logo:logo_filswan
+  },
+  {
+    name:"Joystream",
+    twitter:"https://twitter.com/JoystreamDAO",
+    logo:logo_joysteam
+  },
+  {
+    name:"Rainmaker",
+    twitter:"https://twitter.com/RainmakerGaming",
+    logo:logo_rainmaker
+  },
+  {
     name:"OPGames",
     twitter:"https://twitter.com/OPGames_",
     logo:logo_opgames
@@ -44,40 +63,25 @@ const logo_names = [
     twitter:"https://twitter.com/galaxy_sidus",
     logo:logo_sidus
   },
-   {
-    name:"Rainmaker",
-    twitter:"https://twitter.com/RainmakerGaming",
-    logo:logo_rainmaker
+  {
+    name:"Cardinal",
+    twitter:'https://twitter.com/cardinal_labs/',
+    logo:logo_cardinal
   },
-   {
-    name:"99Starz",
-    twitter:"https://twitter.com/99Starz_",
-    logo:logo_99startup
+  {
+    name:"Dojima",
+    twitter:'https://twitter.com/dojimanetwork',
+    logo:logo_dojima
   },
-    {
-    name:"Joystream",
-    twitter:"https://twitter.com/JoystreamDAO",
-    logo:logo_joysteam
-  },
-    {
-    name:"InvArch",
-    twitter:"https://twitter.com/InvArchNetwork",
-    logo:logo_invarch
-  },
-    {
-    name:"FilSwan",
-    twitter:"https://twitter.com/filswan1",
-    logo:logo_filswan
+  {
+    name:"Nulink",
+    twitter:"https://twitter.com/NuLink_",
+    logo:logo_nulink
   },
   {
     name:"DefiYield",
     twitter:'https://twitter.com/defiyield_app',
     logo:logo_defiyield
-  },
-   {
-    name:"Taunt",
-    twitter:'https://twitter.com/playtaunt',
-    logo:logo_taunt
   },
   {
     name:"Bitkeep",
@@ -85,39 +89,54 @@ const logo_names = [
     logo:logo_bitkeep
   },
   {
-    name:"Conflux",
-    twitter:"https://twitter.com/Conflux_Network",
-    logo:logo_conflux
+    name:"InvArch",
+    twitter:"https://twitter.com/InvArchNetwork",
+    logo:logo_invarch
   },
-   {
-    name:"CertiK",
-    twitter:"https://twitter.com/certik_io",
-    logo:logo_certik
-  },
-    {
-    name:isMobile()?'HSwap':'Hurricaneswap',
-    twitter:"https://twitter.com/HurricaneSwap",
-    logo:logo_hurricane
-  },
-    {
-    name:"CFC",
-    twitter:"https://twitter.com/CFCFIGHTING",
-    logo:logo_fightclub,
-  },
-    {
+  {
     name:"CERE",
     twitter:"https://twitter.com/cerenetwork",
     logo:logo_cere
   },
   {
-    name:"Breach",
-    twitter:"https://twitter.com/Breach_GG",
-    logo:logo_breach
+    name:"Chia",
+    twitter:"https://twitter.com/chia_project",
+    logo:logo_chia
   },
   {
-    name:"Nulink",
-    twitter:"https://twitter.com/NuLink_",
-    logo:logo_nulink
+    name:"Immutable",
+    twitter:"https://twitter.com/Immutable",
+    logo:logo_immutable
+  },
+  {
+    name:"Conflux",
+    twitter:"https://twitter.com/Conflux_Network",
+    logo:logo_conflux
+  },
+  {
+    name:"Airstack",
+    twitter:"https://twitter.com/airstack_xyz",
+    logo:logo_airstack
+  },
+   {
+    name:"Soshow",
+    twitter:"https://twitter.com/soshow_eth",
+    logo:logo_soshow
+  },
+  {
+    name:"CertiK",
+    twitter:"https://twitter.com/certik_io",
+    logo:logo_certik
+  },
+   {
+    name:"99Starz",
+    twitter:"https://twitter.com/99Starz_",
+    logo:logo_99startup
+  },
+  {
+    name:isMobile()?'HSwap':'Hurricaneswap',
+    twitter:"https://twitter.com/HurricaneSwap",
+    logo:logo_hurricane
   },
   {
     name:"Harmony Launcher",
@@ -257,7 +276,9 @@ function App() {
         <div className='Intro-p'>
           We are persistently holding a strong belief that blockchain technology is the future of our next generation and some of those products have already come to reality.
           We are unremittingly seeking investment targets in this field that can potentially reshape the future with the power of blockchain and have an opportunity to be endowed with full support from us.
-          Thus, regardless of monetary funding, we also offer strategic resources to our portfolio partners from the ecosystem of Glock Ventures, including rich partnership resources, professional marketing skills,  strategic community programs, and other post-investment services.
+          Besides investing, we also provide consulting on business models and token economics. 
+          We offer strategic resources to our portfolio partners from the ecosystem of Glock Ventures, including rich partnership resources, professional marketing skills, strategic community programs, and other post-investment services. 
+
         </div>
 
       </div>
