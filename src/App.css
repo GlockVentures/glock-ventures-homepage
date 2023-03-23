@@ -22,12 +22,11 @@ html, body, #root {
 }
 
 .App-logo {
-  width: 10vw;
+  width: 15vw;
   min-width: 100px;
   pointer-events: none;
+  z-index: 1;
 }
-
-
 
 .App-link {
   color: #61dafb;
@@ -36,8 +35,6 @@ html, body, #root {
 .App-left{
   position: fixed;
   left: 0px;
-  top: 0px;
-  /* background-color: gray; */
   width: 20vw;
   min-width: 90px;
 
@@ -48,7 +45,7 @@ html, body, #root {
   font-size: calc(10px + 2vmin);
   color: white;
   padding-left: 3vw;
-  padding-top: 2vw;
+  top: -1vw;
 }
 
 .Section{
@@ -57,7 +54,7 @@ html, body, #root {
   /* background-color: #ffffff33; */
   width: 100vw;
   height: 100vh;
-  padding-top: 10vh;
+  padding-top: 8vh;
   border-top: 1px solid gray;
 }
 
@@ -130,8 +127,7 @@ footer{
   line-height: calc(15px + 1.5vw);
   letter-spacing: 5px;
   margin-right: 10vw;
-  margin-bottom: 5vw;
-  margin-top: 7.5vw;
+  margin-bottom: 3vw;
 }
 
 .Intro-p {
@@ -219,4 +215,86 @@ footer{
   left: -4.42vw;
   top: calc(50px + 25vh - 15vw); /* fit for more sizes of screen */
   z-index: 1;
+}
+
+.value-add {
+  margin-top: 0.3rem;
+}
+
+.s-wrapper {
+  margin-right: 0.78rem;
+  text-align: center;
+  /* width: 25vw; */
+  font-size: 400;
+  margin-bottom: 3rem;
+
+}
+
+.Margin_box{
+  margin-top: 6rem;
+}
+
+.section-title {
+  font-size: 1.7rem;
+  font-family: 'PingFangSC-Regular', 'PingFang SC';
+  font-weight: 700;
+  color: white;
+  line-height: .24rem;
+  margin-bottom: 1rem;
+}
+
+
+.s-wrapper p{
+  font-size: calc(10px + 0.7vw) !important;
+  font-family: 'PingFangSC-Regular', 'PingFang SC';
+  font-weight: 400;
+  color: white;
+  line-height: calc(16px + 1vw);
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 2;
+  text-align: justify;
+  /* text-indent:3rem; */
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 1.65rem;
+  padding: 0 0.6rem;
+  top: -5vh;
+}
+
+.header-mobile{
+  width: 32.125vw;
+  min-width: 32.125vw;
+  height: 28.729vw;
+  font-size: 5.116vw;
+  font-family: Arial-Black, Arial;
+  font-weight: 900;
+  color: #FFFFFF !important;
+  text-align: left;
+  margin-top: 7.204vw;
+
+  position: relative;
+  z-index: 2;
+}
+
+.header ul{display: flex;
+  align-items: center;
+}
+.header ul li
+{
+  margin-right: 5rem;
+}
+.header ul li img
+{
+  max-height: 2rem;
+  
+}
+.header ul li a {
+  color: white;
+  font-weight: 400;
+  font-size: 20px;
 }

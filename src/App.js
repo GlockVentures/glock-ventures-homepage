@@ -1,4 +1,5 @@
-import logo from './static/gv_logo.jpg';
+// import logo from './static/HDlogo.png';
+import logo from './static/logo_white.png';
 import './App.css';
 import { Steps, Popover } from 'antd';
 import React from 'react';
@@ -30,7 +31,25 @@ import logo_immutable from './static/logos/logo_immutable.jpeg'
 import bg from './static/Portfolios_bg@2x.png'
 import intro_bg from './static/bg_img.png'
 import yuhangyuan from './static/yuhangyuan_img@2x.png'
+// import yuhangyuan from './static/HDlogo.png'
 import { isMobile } from './platform';
+import twitter_logo from './static/twitter.svg'
+import medium_logo from './static/medium.svg'
+
+const valueadd_content = [
+  {
+    title:"Invest",
+    content:"We've been investing and incubating some of the most well-known and successful projects in the crypto space since 2017. We always look for the best ones and put our bet."
+  },
+  {
+    title:"Advise",
+    content:"We help projects improve on the basics of successful projects in the space, including roadmaps, tokenomics, go to market strategy etc. We are dedicating our years of experiences and knowledges into our supported projects after witnessing and studying thousands of projects. "
+  },
+  {
+    title:"Support",
+    content:"As a result of our vast portfolio, we are able to connect the founders we support with the portfolio network created through years and share the best minds. We also connect projects strategically with suitable investment resources, exchange resources, market networks etc to accelerate projects on different perspectives."
+  }
+]
 
 const logo_names = [
   {
@@ -40,7 +59,7 @@ const logo_names = [
   },
   {
     name:"FilSwan",
-    twitter:"https://twitter.com/filswan1",
+    twitter:"https://twitter.com/0xfilswan",
     logo:logo_filswan
   },
   {
@@ -79,8 +98,8 @@ const logo_names = [
     logo:logo_nulink
   },
   {
-    name:"DefiYield",
-    twitter:'https://twitter.com/defiyield_app',
+    name:"De.Fi",
+    twitter:'https://twitter.com/DeDotFi',
     logo:logo_defiyield
   },
   {
@@ -125,7 +144,7 @@ const logo_names = [
   },
   {
     name:"CertiK",
-    twitter:"https://twitter.com/certik_io",
+    twitter:"https://twitter.com/CertiK",
     logo:logo_certik
   },
    {
@@ -138,11 +157,11 @@ const logo_names = [
     twitter:"https://twitter.com/HurricaneSwap",
     logo:logo_hurricane
   },
-  {
-    name:"Harmony Launcher",
-    twitter:"https://twitter.com/HarmonyLauncher",
-    logo:logo_harmonylauncher
-  },
+  // {
+  //   name:"Harmony Launcher",
+  //   twitter:"https://twitter.com/HarmonyLauncher",
+  //   logo:logo_harmonylauncher
+  // },
 ]
 
 
@@ -153,6 +172,7 @@ const steps = [
   '',
   'Home',
   'Brief Introduction',
+  'Value Add',
   'Portfolios',
   'Contact',
   '',
@@ -248,9 +268,30 @@ function App() {
           ))}
         </Steps>
       </div>
-
       <div className='Section Home' id='Home'>
-
+        <div className={isMobile()?'header-mobile':'header'}>
+          <ul>
+            <li>
+              <a href='#Portfolios'> Portfolio</a>
+            </li>
+            <li>
+              <a href='#Value_Add'> Value Add</a>
+            </li>
+            <li>
+              <a href='#Contact'> Contact</a>
+            </li>
+            <li>
+              <a href='https://twitter.com/GlockVentures' target="_blank"> 
+              <img src={twitter_logo} alt='icon' />
+              </a>
+            </li>
+            <li>
+              <a href='https://medium.com/@invest_71820' target="_blank"> 
+              <img src={medium_logo} alt='icon' />
+              </a>
+            </li>
+          </ul>
+        </div>
         <div className='Home-horizontal'>
           <div className={isMobile()?'Home-h-mobile':'Home-h'}>
             <p>
@@ -267,20 +308,36 @@ function App() {
       </div>
 
       <div className='Section Intro' id='Brief_Introduction'>
-        <h2 className='Intro-h'>Our History</h2>
+        <h2 className='Intro-h Margin_box'>Our History</h2>
 
         {/*<div hidden={isMobile()} className='Intro-img-container '>*/}
           {/*<img className='Intro-img ' src={intro_bg}></img>*/}
         {/*</div>*/}
 
         <div className='Intro-p'>
-          We are persistently holding a strong belief that blockchain technology is the future of our next generation and some of those products have already come to reality.
-          We are unremittingly seeking investment targets in this field that can potentially reshape the future with the power of blockchain and have an opportunity to be endowed with full support from us.
-          Besides investing, we also provide consulting on business models and token economics. 
-          We offer strategic resources to our portfolio partners from the ecosystem of Glock Ventures, including rich partnership resources, professional marketing skills, strategic community programs, and other post-investment services. 
-
+          As a group of passionate and firmly-believed web3 preachers and practitioners since 2017,
+          we persistently hold a strong belief that blockchain technology is the future of our next generation, 
+          and we've got lucky enough to witness some of those products we supported have already come to reality and change the industry landscape. 
+          <br/>
+          <br/>
+          <br/>We are unremittingly seeking investment targets in this field that can potentially reshape the future with the power of blockchain which we will provide full support and attention to.
         </div>
 
+      </div>
+      
+      <div className='Section Intro ' id='Value_Add'>
+        <h2 className='Intro-h'>Value Add</h2>
+        <div className='Intro-h'>
+          {valueadd_content.map((item, index)=>{
+          return(
+            <div className='s-wrapper'>
+            <h3 className='section-title'>{item.title}</h3>
+            <p >{item.content}</p>
+              
+          </div>
+              )})
+          }
+        </div>
       </div>
 
       <div className='Section Portfolios' id='Portfolios'>
@@ -305,6 +362,8 @@ function App() {
               <a href={"https://twitter.com/GlockVentures"} target={"_blank"}>@GlockVentures</a></div>
             <div className='Contact-info1'>Email：
               <a href={"mailto:invest@glockventures.com"} target={"_blank"}>invest@glockventures.com</a></div>
+              <div className='Contact-info1'>Medium：
+              <a href={"https://medium.com/@invest_71820"} target={"_blank"}>@invest_71820</a></div>
           </div>
         </div>
         <footer>

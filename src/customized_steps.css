@@ -45,6 +45,9 @@
     background-color: white;
 }
 
+.ant-steps-item{
+    height: 12vh;
+}
 .ant-steps-item-tail::after{
 /* bar color */
     background-color: rgb(50, 50, 50) !important;
